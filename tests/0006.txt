@@ -1,0 +1,32 @@
+@id must be an absolute IRI
+
+[]
+
+-
+
+{
+  "@context": {
+    "ex": "http://example.com/ns#"
+  },
+  "ex:entries": [
+    { "@id": 3 },
+    { "@id": "foo" },
+    { "@id": "@foo" },
+    { "@id": "@foo:bar" },
+    { "@id": "foo:bar" },
+    { "@id": "ex:test" },
+    { "@id": "http://example.com/" }
+  ]
+}
+
+{
+  "http://example.com/ns#entries": [
+    {},
+    {},
+    {},
+    {},
+    { "@id": "foo:bar" },
+    { "@id": "ex:test" },
+    { "@id": "http://example.com/" }
+  ]
+}

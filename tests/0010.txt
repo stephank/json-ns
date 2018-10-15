@@ -1,0 +1,54 @@
+Clear context with nulls
+
+[]
+
+-
+
+{
+  "@context": {
+    "@vocab": "http://example.com/vocab#",
+    "ex": "http://example.com/ex#",
+    "alias": { "@id": "ex:alias" },
+    "ex:i18n": { "@container": "@language" }
+  },
+  "foo": 3,
+  "ex:bar": 5,
+  "alias": 8,
+  "ex:i18n": "test",
+  "ex:nested/one": {
+    "@context": {
+      "@vocab": null,
+      "ex": null,
+      "alias": null,
+      "ex:i18n": null
+    },
+    "foo": 3,
+    "ex:bar": 5,
+    "alias": 8,
+    "ex:i18n": "test"
+  },
+  "ex:nested/two": {
+    "@context": null,
+    "foo": 3,
+    "ex:bar": 5,
+    "alias": 8,
+    "ex:i18n": "test"
+  }
+}
+
+{
+  "http://example.com/vocab#foo": 3,
+  "http://example.com/ex#bar": 5,
+  "http://example.com/ex#alias": 8,
+  "http://example.com/ex#i18n": {
+    "": "test"
+  },
+  "http://example.com/ex#nested/one": {
+    "ex:bar": 5,
+    "ex:i18n": "test"
+  },
+  "http://example.com/ex#nested/two": {
+    "ex:bar": 5,
+    "ex:i18n": "test"
+  }
+}

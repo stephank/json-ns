@@ -1,0 +1,65 @@
+Normalise language maps
+
+[]
+
+-
+
+[
+  {
+    "@context": {
+      "@language": "en",
+      "@vocab": "http://example.com/one#",
+      "foo": { "@container": "@language" }
+    },
+    "foo": "Hello"
+  },
+  {
+    "@context": {
+      "@vocab": "http://example.com/two#",
+      "foo": { "@container": "@language" }
+    },
+    "foo": "Hello"
+  },
+  {
+    "@context": {
+      "@vocab": "http://example.com/three#",
+      "foo": { "@container": "@language" }
+    },
+    "foo": {
+      "en": "Hello"
+    }
+  },
+  {
+    "@context": {
+      "@language": "de",
+      "@vocab": "http://example.com/four#",
+      "foo": { "@container": "@language" }
+    },
+    "foo": {
+      "en": "Hello"
+    }
+  }
+]
+
+[
+  {
+    "http://example.com/one#foo": {
+      "en": "Hello"
+    }
+  },
+  {
+    "http://example.com/two#foo": {
+      "": "Hello"
+    }
+  },
+  {
+    "http://example.com/three#foo": {
+      "en": "Hello"
+    }
+  },
+  {
+    "http://example.com/four#foo": {
+      "en": "Hello"
+    }
+  }
+]

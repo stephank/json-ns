@@ -1,0 +1,22 @@
+Ignore bad namespace definitions
+
+[]
+
+-
+
+{
+  "@context": {
+    "one": "test",
+    "two": "@test:dummy",
+    "three": 3
+  },
+  "one:foo": "bar",
+  "two:foo": "bar",
+  "three:foo": "bar"
+}
+
+{
+  "one:foo": "bar",
+  "two:foo": "bar",
+  "three:foo": "bar"
+}

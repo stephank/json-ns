@@ -1,0 +1,31 @@
+Merge nested contexts
+
+[]
+
+-
+
+{
+  "@context": {
+    "@vocab": "http://example.com/vocab#",
+    "ex": "http://example.com/ex#"
+  },
+  "foo": 3,
+  "ex:bar": 5,
+  "ex:nested": {
+    "@context": {
+      "@vocab": "http://example.com/nested/vocab#",
+      "ex": "http://example.com/nested/ex#"
+    },
+    "foo": 3,
+    "ex:bar": 5
+  }
+}
+
+{
+  "http://example.com/vocab#foo": 3,
+  "http://example.com/ex#bar": 5,
+  "http://example.com/ex#nested": {
+    "http://example.com/nested/vocab#foo": 3,
+    "http://example.com/nested/ex#bar": 5
+  }
+}

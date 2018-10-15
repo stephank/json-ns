@@ -1,0 +1,28 @@
+Use provided target context
+
+[]
+
+: http://example.com/vocab#
+one: http://example.com/one#
+two: ex:test/
+three: ex:test_
+
+{
+  "http://example.com/no-match": "no-match",
+  "http://example.com/vocab#zero": ["bar"],
+  "http://example.com/one#foo": {
+    "ex:test/foo": [
+      { "ex:test_foo:bar": "baz" }
+    ]
+  }
+}
+
+{
+  "http://example.com/no-match": "no-match",
+  "zero": ["bar"],
+  "one:foo": {
+    "two:foo": [
+      { "three:foo:bar": "baz" }
+    ]
+  }
+}

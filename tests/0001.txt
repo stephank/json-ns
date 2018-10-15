@@ -1,0 +1,16 @@
+Drop properties with no namespace
+
+[]
+
+-
+
+{
+  "foo": "bar",
+  "ex:test": {
+    "foo": "bar"
+  }
+}
+
+{
+  "ex:test": {}
+}

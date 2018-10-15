@@ -1,0 +1,29 @@
+Expand basic namespaces
+
+[]
+
+-
+
+{
+  "@context": {
+    "@vocab": "http://example.com/vocab#",
+    "one": "http://example.com/one#",
+    "two": "ex:test/",
+    "three": "ex:test_"
+  },
+  "zero": ["bar"],
+  "one:foo": {
+    "two:foo": [
+      { "three:foo:bar": "baz" }
+    ]
+  }
+}
+
+{
+  "http://example.com/vocab#zero": ["bar"],
+  "http://example.com/one#foo": {
+    "ex:test/foo": [
+      { "ex:test_foo:bar": "baz" }
+    ]
+  }
+}

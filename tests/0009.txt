@@ -1,0 +1,19 @@
+Merge multiple contexts
+
+[]
+
+-
+
+{
+  "@context": [
+    { "@vocab": "http://example.com/vocab#" },
+    { "ex": "http://example.com/ex#" }
+  ],
+  "foo": 3,
+  "ex:bar": 5
+}
+
+{
+  "http://example.com/vocab#foo": 3,
+  "http://example.com/ex#bar": 5
+}

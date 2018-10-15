@@ -1,0 +1,37 @@
+Expand @type values
+
+[]
+
+-
+
+{
+  "@context": {
+    "ex": "http://example.com/ns#",
+    "unused": { "@id": "ex:foo" }
+  },
+  "ex:entries": [
+    { "@type": 3 },
+    { "@type": "foo" },
+    { "@type": "@foo" },
+    { "@type": "@foo:bar" },
+    { "@type": "unused" },
+    { "@type": "foo:bar" },
+    { "@type": "ex:test" },
+    { "@type": "http://example.com/" },
+    { "@type": ["foo:bar", "ex:test", "http://example.com/"] }
+  ]
+}
+
+{
+  "http://example.com/ns#entries": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    { "@type": ["foo:bar"] },
+    { "@type": ["http://example.com/ns#test"] },
+    { "@type": ["http://example.com/"] },
+    { "@type": ["foo:bar", "http://example.com/ns#test", "http://example.com/"] }
+  ]
+}

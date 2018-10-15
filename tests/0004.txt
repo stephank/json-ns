@@ -1,0 +1,23 @@
+Expand aliases
+
+[]
+
+-
+
+{
+  "@context": {
+    "@vocab": "http://example.com/vocab#",
+    "x": { "@id": "y" },
+    "y": { "@id": "z" },
+    "bad": { "@id": "@type" }
+  },
+  "x": 1,
+  "y": 2,
+  "bad": 3
+}
+
+{
+  "http://example.com/vocab#y": 1,
+  "http://example.com/vocab#z": 2,
+  "http://example.com/vocab#bad": 3
+}
